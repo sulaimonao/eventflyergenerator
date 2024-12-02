@@ -1,0 +1,7 @@
+__pycache__/
+.env
+venv/
+output/
+event_flyer_generator/static/.DS_Store
+event_flyer_generator/src/.DS_Store
+.DS_Store

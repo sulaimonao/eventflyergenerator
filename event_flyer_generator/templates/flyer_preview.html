@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Flyer Preview</title>
+</head>
+<body>
+    <h1>Generate Your Event Flyer</h1>
+    <form method="POST" action="/generate-image">
+        <textarea name="event_details" rows="5" cols="50" placeholder="Enter event details here"></textarea>
+        <button type="submit">Generate Image</button>
+    </form>
+    {% if image_url %}
+    <h2>Generated Image</h2>
+    <img src="{{ image_url }}" alt="Generated Flyer Image" width="600">
+    {% endif %}
+
+    <form method="POST" action="/generate">
+        <input type="hidden" name="event_details" value="{{ event_details }}">
+        <button type="submit">Generate Flyer with Image</button>
+    </form>
+</body>
+</html>

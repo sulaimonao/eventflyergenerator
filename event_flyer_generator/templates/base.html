@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>Event Flyer</title>
+</head>
+<body>
+    {% if image_url %}
+    <div style="text-align: center;">
+        <img src="{{ image_url }}" alt="Event Flyer Image" style="max-width: 100%; height: auto;">
+    </div>
+    {% endif %}
+    <h1>{{ details.event }}</h1>
+    <p><strong>Date:</strong> {{ details.date }}</p>
+    <p><strong>Location:</strong> {{ details.location }}</p>
+    <p><strong>Start Time:</strong> {{ details.start_time }}</p>
+    <p><strong>End Time:</strong> {{ details.end_time }}</p>
+</body>
+</html>
